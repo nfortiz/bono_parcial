@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>    
+    <title>árboles Binarios</title>
+    <style>
+    path{
+        fill:none;
+        stroke:black;
+    }
+    circle{
+       stroke: steelblue;
+        stroke-width: 1.5px;
+	}
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-2 py-1">
+        <div class="card my-2" >
+            <div class="card-body">
+                <h5 class="card-title">Bono parcial 2</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Nixon Fernando Oriz Suarez</h6>
+                <p class="card-text">nf.ortiz@uniandes.edu.co - 201616265</p>
+            </div>
+        </div>
+        <div class="alert alert-danger" role="alert">No presionar enter al momento de cargar un JSON o añadir un Nodo. Por favor, utilizar los botones.</div>
+        <div class="row m-auto">
+            <div class="col-4">
+                <h2 class="lead">Cargar árbol de ejemplo</h2>
+                <button onclick="pintarExample()" type="button" class="btn btn-primary">Árbol de ejemplo</button></div>
+            <div class="col-4">
+                <h2 class="lead">Cargar desde un .json</h2>
+                <form name="myForm">
+                    <div class="form-group">
+                        <label for="addressJson">Ruta del Json</label>
+                        <input name="fdirjson" type="text" class="form-control" id="addressJson"  placeholder="http://localhost:8080/data.json">
+                    </div>                                               
+                    <button type="button" onclick="cargarJson()" class="btn btn-primary">Cargar</button>
+                </form>
+            </div>
+            <div class="col-4">
+                <h2 class="lead">Añadir nodo</h2>
+                <form class="form-inline" name="addForm">
+                        <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only">Password</label>
+                        <input name="fnewvalue" type="number" class="form-control" id="inputPassword2" placeholder="value">
+                    </div>
+                    <button type="button" onclick="aniadirNodo()" class="btn btn-primary mb-2">Add</button>
+                </form>
+            </div>
+        </div>       
+    </div>
+    
+    <div id="canvas">
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
